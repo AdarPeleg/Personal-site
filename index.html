@@ -63,9 +63,19 @@
             <li><a href="https://github.com/AdarPeleg"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="32" height="32"></a></li>
         </ul>
     </section>
+<!-- Add color slider -->
+    <section>
+        <h2>Change Background Color</h2>
+        <input type="range" min="0" max="360" value="0" id="color-slider">
+    </section>
 
     <script>
-        // Add your JavaScript code here
+        // Add JavaScript code to change background color
+        const colorSlider = document.querySelector('#color-slider');
+        colorSlider.addEventListener('input', () => {
+            const hue = colorSlider.value;
+            document.body.style.backgroundColor = `hsl(${hue}, 50%, 80%)`;
+        });
     </script>
 </body>
 </html>
